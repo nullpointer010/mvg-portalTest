@@ -25,11 +25,11 @@ const networksMetadata = [
     ]
   },
   {
-    chainId: 32457,
-    networkId: 32457,
-    name: 'Pontus-X Testnet',
-    chain: 'Pontus-X',
-    rpc: ['https://rpc.test.pontus-x.eu'],
+    chainId: 8996,
+    networkId: 8996,
+    name: 'Development',
+    chain: 'Development',
+    rpc: ['https://localhost:8545'],
     faucets: [],
     nativeCurrency: {
       name: 'EURAU',

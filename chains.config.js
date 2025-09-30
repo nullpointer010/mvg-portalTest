@@ -24,9 +24,8 @@ const chains = [
     nodeUri: 'https://rpc.dev.pontus-x.eu',
     subgraphUri: 'https://subgraph.dev.pontus-x.eu',
     explorerUri: 'https://explorer.pontus-x.eu/devnet/pontusx'
-  },
-  {
-    chainId: 32457,
+  },/*{
+    chainId: 8996,
     isDefault: true,
     isCustom: true,
     network: 'pontusx-testnet',
@@ -41,13 +40,87 @@ const chains = [
     transactionConfirmationBlocks: 1,
     transactionPollingTimeout: 750,
     gasFeeMultiplier: 1.1,
-    providerUri: 'https://provider.test.pontus-x.eu',
+    providerUri: '',
     providerAddress: '0x9546d39CE3E48BC942f0be4AA9652cBe0Aff3592',
     metadataCacheUri: 'https://aquarius.pontus-x.eu',
     nodeUri: 'https://rpc.test.pontus-x.eu',
     subgraphUri: 'https://subgraph.test.pontus-x.eu',
     explorerUri: 'https://explorer.pontus-x.eu/testnet/pontusx'
-  }
+},*/
+/*
+{
+  chainId: 8996,
+  isDefault: true,
+  isCustom: true,
+  network: 'pontusx-local',
+  oceanTokenSymbol: 'OCEAN',
+
+  // Direcciones de contratos locales generadas por Barge
+  oceanTokenAddress: '0x1d1e72b7c1f3d38b7d3c7f1e3e1d7e1d1f3e7c1d',  // ejemplo, reemplaza por tu address real
+  nftFactoryAddress: '0x2a3b4c5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e', // ejemplo local
+  fixedRateExchangeAddress: '0x3b4c5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e5f', // ejemplo local
+  dispenserAddress: '0x4c5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e5f6a', // ejemplo local
+  opfCommunityFeeCollector: '0x5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e5f6a7b', // ejemplo local
+
+  startBlock: 0,
+  transactionBlockTimeout: 50,
+  transactionConfirmationBlocks: 1,
+  transactionPollingTimeout: 750,
+  gasFeeMultiplier: 1.1,
+
+  // Provider local (Barge) → en tu Docker el puerto 
+  providerUri: 'http://127.0.0.1:9001',
+  providerAddress: '0xe08A1dAe983BC701D05E492DB80e0144f8f4b909',  // opcional, generalmente lo deja vacío para development
+
+  // Metadata cache → si no tienes Aquarius local, puedes usar el remoto
+  metadataCacheUri: 'https://aquarius.pontus-x.eu',
+
+  // Nodo local Ganache
+  nodeUri: 'http://127.0.0.1:8545',
+
+  // Subgraph local opcional (Barge expone ocean-node en 9000 host)
+  subgraphUri: '',
+
+  // Explorer → puedes dejar vacío para dev
+  explorerUri: '',
+    // Añadido para evitar ENS en red local
+  ensRegistryAddress: undefined
+},*/
+
+{
+  chainId: 8996,
+  isDefault: true,
+  isCustom: true,
+  network: 'pontusx-local',
+  oceanTokenSymbol: 'OCEAN',
+
+  oceanTokenAddress: '0x1d1e72b7c1f3d38b7d3c7f1e3e1d7e1d1f3e7c1d',
+  nftFactoryAddress: '0x2a3b4c5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e',
+  fixedRateExchangeAddress: '0x3b4c5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e5f',
+  dispenserAddress: '0x4c5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e5f6a',
+  opfCommunityFeeCollector: '0x5d6e7f8901a2b3c4d5e6f7a8901b2c3d4e5f6a7b',
+
+  startBlock: 0,
+  transactionBlockTimeout: 50,
+  transactionConfirmationBlocks: 1,
+  transactionPollingTimeout: 750,
+  gasFeeMultiplier: 1.1,
+
+  providerUri: 'http://127.0.0.1:9001',
+  providerAddress: '0xe08A1dAe983BC701D05E492DB80e0144f8f4b909',
+
+  metadataCacheUri: 'http://127.0.0.1:5000', // si Aquarius local
+  nodeUri: 'http://127.0.0.1:8545',
+  subgraphUri: '',
+  explorerUri: '',
+
+  // Añadido para evitar ENS en red local
+  ensRegistryAddress: undefined,
+  supportsENS: false
+}
+
+
+
 ]
 
 const getDefaultChainIds = () => {
