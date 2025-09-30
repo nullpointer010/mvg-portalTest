@@ -1,6 +1,6 @@
 [![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
 
-<h1>Modificar content/networks-metadata.json una vez terminada la instalación, modificar rpc</h1>
+<h1>Modificar content/networks-metadata.json una vez terminada la instalación, modificar rpc, test</h1>
 <h1 align="center">Ocean Marketplace</h1>
 
 [![Build Status](https://github.com/oceanprotocol/market/workflows/CI/badge.svg)](https://github.com/oceanprotocol/market/actions)
